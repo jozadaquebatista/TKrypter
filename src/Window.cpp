@@ -1,10 +1,11 @@
 #include "../includes/Window.hpp"
+#include "../includes/Window_Context.hpp"
 
 Widget::Window::Window()
 {
     window_title = "<none>";
-    size_x = 600;
-    size_y = 400;
+    size_x = 300;
+    size_y = 90;
     
     puts("Procedimentos de inicializacao.");
 }
@@ -12,7 +13,13 @@ Widget::Window::Window()
 Widget::Window::~Window()
 {
     puts("Finalizacao do objeto janela.");
-    fprintf(stdout, "JANELA:\n-titulo:%s\n-dimensao:%dx%d\n", window_title, size_x, size_y);
+    std::clog<<"JANELA:"
+    <<"-> titulo: "
+    <<window_title<<std::endl
+    <<"-> dimensao: "
+    <<size_x
+    <<" x "
+    <<size_y<<std::endl;
 }
 
 bool Widget::Window::createWindow(const char*wt, uint32_t x, uint32_t y)
@@ -21,40 +28,20 @@ bool Widget::Window::createWindow(const char*wt, uint32_t x, uint32_t y)
     size_x = x;
     size_y = y;
     
+    /* ************************************* *
+     * IF Windows, compile for that platform.*
+     * ************************************* */
     #ifdef _WIN32
-        
-        const char*WndClassName = (const char*)wt;
+        Widget_WIN32::createWindow(wt);
     
-        LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
-        int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, uint8 cmdShow)
-        {
-            HWND hWnd;
-            WNDCLASSEX wc;
-
-            wc.cbSize         = sizeof(WNDCLASSEX);
-            wc.style          = CS_HREDRAW | CS_VREDRAW;
-            wc.lpfnWndProc    = WndProc;
-            wc.cbClsExtra     = 0;
-            wc.cbWndExtra     = 0;
-            wc.hInstance      = hInstance;
-            wc.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
-            wc.hCursor        = LoadCursor(NULL, IDC_ARROW);
-            wc.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-            wc.lpszMenuName   = NULL;
-            wc.lpszClassName  = WndClassName;
-            wc.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
-        }
-        puts("Sistema Windows!");
+    /* ************************************ *
+     * IF Linux, compile for that platform. *
+     * ************************************ */
     #elif __linux__
-        
-        Fl_Window win(x, y);
-        win.show();
-        return(Fl::run());
-        
-        puts("Sistema Linux!");
+        Widget_Linux::createWindow(wt,x,y);
     #endif
     
-    puts("Procedimentos para criacao da janela.");
+    std::clog << "Procedimentos para criacao da janela." << std::endl;
     return true;
 }
 

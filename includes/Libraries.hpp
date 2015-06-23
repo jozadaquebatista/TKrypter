@@ -4,6 +4,11 @@
     /*#include "../depends/gtk/gtk.h"*/
     #include <FL/Fl.H>
     #include <FL/Fl_Window.H>
+    #include <FL/Fl_Input.H>
+    #include <FL/Fl_Widget.H>
+    #include <FL/Fl_Button.H>
+    #include <FL/Fl_File_Chooser.H>
+    #include <FL/Fl_Native_File_Chooser.H>
 #endif
 /* STANDARD C LIBRARIES */
 #include <stdio.h>
