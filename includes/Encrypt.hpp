@@ -1,3 +1,7 @@
 class Encrypt{
-    
+
+private:
+
+public:
+
 };
