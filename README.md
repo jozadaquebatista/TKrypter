@@ -1,5 +1,23 @@
-# TKrypter - [I'm actually working on that ...]
+##@TKrypter - Text Key Encrypter
+###@[I'm actually working on that ...]
 
-<center><img src="http://www.datanumen.com/blogs/wp-content/uploads/2015/03/data_encryption.jpg" width=400 border=3></center>
+ <pre>                                                                                              
+ _|_|_|_|                                                      _|      _|                      
+ _|        _|_|_|      _|_|_|  _|  _|_|  _|    _|  _|_|_|    _|_|_|_|        _|_|    _|_|_|    
+ _|_|_|    _|    _|  _|        _|_|      _|    _|  _|    _|    _|      _|  _|    _|  _|    _|  
+ _|        _|    _|  _|        _|        _|    _|  _|    _|    _|      _|  _|    _|  _|    _|  
+ _|_|_|_|  _|    _|    _|_|_|  _|          _|_|_|  _|_|_|        _|_|  _|    _|_|    _|    _|  
+                                               _|  _|                                          
+ _|_|_|_|_|  _|    _|                      _|_|    _|  _|                                      
+     _|      _|  _|    _|  _|_|  _|    _|  _|_|_|    _|_|_|_|    _|_|    _|  _|_|              
+     _|      _|_|      _|_|      _|    _|  _|    _|    _|      _|_|_|_|  _|_|                  
+     _|      _|  _|    _|        _|    _|  _|    _|    _|      _|        _|                    
+     _|      _|    _|  _|          _|_|_|  _|_|_|        _|_|    _|_|_|  _|                    
+                                       _|  _|                                                  
+                                   _|_|    _|                                                  
+01000101 01101110 01100011 01110010 01111001 01110000 01110100 01101001 01101111 01101110 
+01010100 01001011 01110010 01111001 01110000 01110100 01100101 01110010 
+</pre>
 
-A software to encrypt texts or files, use it to send to your know people some encrypted text or files, and then they will decrypt it and catch the message.
+
+#### A software to encrypt texts or files, use it to send to your know people some encrypted text or files, and then they will decrypt it and catch the message.
