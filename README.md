@@ -20,3 +20,5 @@
 
 ####What the bit is it?
 ######It's just another software to encrypt texts or files, you can use it to send to your know people some encrypted text or files, and then they will decrypt it and catch the message or file, giving you some privacy in the data that will be exchanged.
+
+#######How many time? Just a little.
